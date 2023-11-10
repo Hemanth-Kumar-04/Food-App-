@@ -7,6 +7,7 @@ import {
 } from 'react-native-responsive-screen';
 import {BellIcon, MagnifyingGlassCircleIcon} from 'react-native-heroicons/outline';
 
+const [activeCategory, setActiveCategory] = useState("Beef")
 export default function HomeScreen() {
   return (
     <View className="flex-1 bg-white">
@@ -55,7 +56,7 @@ export default function HomeScreen() {
         </View>
         {/* categories */}
         <View>
-            <Categories />
+            <Categories activeCategory={activeCategory} setActiveCategory={setActiveCategory}/>
         </View>
       </ScrollView>
     </View>
